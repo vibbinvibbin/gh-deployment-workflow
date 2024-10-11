@@ -1,0 +1,18 @@
+
+on:
+  pull_request:
+    # Sequence of patterns matched against refs/heads
+    branches:
+      - main
+
+jobs:
+  my-first-job:
+    name: Vibbin
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print a greeting
+        env:
+          My_Var: Hi There! My name is
+          Name:  Vibbin
+        run: |
+          echo $My_Var $Name
